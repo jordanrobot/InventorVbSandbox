@@ -25,10 +25,11 @@ Sub FixItemNumbers()
 			
 			bomRow = drawingBomRow.BOMRow
 			stockNumber = GetStockNumber(bomRow)
-
-			If (IsFabricatedPart(stockNumber)) Then
-				bomRow.ItemNumber = GetSheetView(bomRow)
-			End If
+			Try
+				If (IsFabricatedPart(stockNumber)) Then
+					bomRow.ItemNumber = GetSheetView(bomRow)
+				End If
+			End Try
 		Next
 	Next
 	
