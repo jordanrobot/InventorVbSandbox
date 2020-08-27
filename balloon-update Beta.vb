@@ -29,6 +29,7 @@ Sub FixItemNumbers()
 				If (IsFabricatedPart(stockNumber)) Then
 					bomRow.ItemNumber = GetSheetView(bomRow)
 				End If
+			Catch
 			End Try
 		Next
 	Next
